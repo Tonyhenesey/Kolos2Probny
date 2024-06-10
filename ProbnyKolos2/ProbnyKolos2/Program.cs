@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 // Register application services
-builder.Services.AddScoped<IGetOrderService, GetOrderService>();
+builder.Services.AddScoped<IAddOrderService, AddOrderService>();
 
 var app = builder.Build();
 
